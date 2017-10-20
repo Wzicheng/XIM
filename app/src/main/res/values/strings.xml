@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">XIM</string>
+    <string name="register_information">点击上面的"注册"按钮，即表示你同意《XIM 即时聊天软件许可即服务协议》和《XIM 隐私保护指引》</string>
+    <string name="register">注册</string>
+    <string name="login">登陆</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="confirm">确认密码</string>
+    <string name="input_username">请输入您的用户名</string>
+    <string name="input_password">请输入密码</string>
+</resources>

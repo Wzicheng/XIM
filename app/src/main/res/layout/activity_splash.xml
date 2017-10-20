@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome">
+
+    <RelativeLayout
+        android:id="@+id/rl_loginbar"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/shape_radius_rectangle_greed"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="@string/login"
+            android:textSize="20sp"/>
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_radius_rectangle_white"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="@string/register"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+</RelativeLayout>
