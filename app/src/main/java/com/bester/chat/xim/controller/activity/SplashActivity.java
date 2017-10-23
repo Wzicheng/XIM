@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 
 import com.bester.chat.xim.R;
 import com.bester.chat.xim.model.Model;
+import com.bester.chat.xim.model.bean.UserInfo;
 import com.hyphenate.chat.EMClient;
 
 /**
@@ -27,6 +28,7 @@ public class SplashActivity extends Activity implements View.OnClickListener {
      * 已经登陆过账号，直接跳转到主界面
      */
     private static final int TO_MAINACTIVITY = 1;
+    public static SplashActivity splashActivity = null;
     private RelativeLayout mRlLoginbar;
     private Button mBtnLogin;
     private Button mBtnRegister;
@@ -62,8 +64,12 @@ public class SplashActivity extends Activity implements View.OnClickListener {
                 @Override
                 public void run() {
                     if (EMClient.getInstance().isLoggedInBefore()){ //登陆过，获取到当前用户的信息
-
-                        handler.sendEmptyMessageDelayed(TO_MAINACTIVITY,2000);
+                        UserInfo accountByHxId = Model.getInstance().getUserAccountDAO().getAccountByHxId(EMClient.getInstance().getCurrentUser());
+                        if (accountByHxId != null){//返回数据为空
+                            handler.sendEmptyMessageDelayed(TO_MAINACTIVITY,2000);
+                        } else {
+                            handler.sendEmptyMessageDelayed(SHOW_LOGINBAR,2000);
+                        }
                     } else { //还未登陆，显示登录注册
                         handler.sendEmptyMessageDelayed(SHOW_LOGINBAR,2000);
                     }
@@ -76,6 +82,9 @@ public class SplashActivity extends Activity implements View.OnClickListener {
         mRlLoginbar = (RelativeLayout) findViewById(R.id.rl_loginbar);
         mBtnLogin = (Button) findViewById(R.id.btn_login);
         mBtnRegister = (Button) findViewById(R.id.btn_register);
+
+        //用于在登陆成功后finish()此页面
+        splashActivity = this;
 
         //绑定点击监听
         mBtnLogin.setOnClickListener(this);

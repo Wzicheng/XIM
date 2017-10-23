@@ -87,8 +87,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-
-                            Toast.makeText(RegisterActivity.this,"注册成功，将在2秒内跳转至登陆页面!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this,"注册成功，将在2秒内跳转至登陆页面!",Toast.LENGTH_SHORT).show();
                         }
                     });
                     DelayToLogin(userName);
@@ -98,7 +97,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            Toast.makeText(RegisterActivity.this,"注册失败"+e.toString(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this,"注册失败"+e.toString(),Toast.LENGTH_SHORT).show();
                         }
                     });
                 }

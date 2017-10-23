@@ -2,6 +2,8 @@ package com.bester.chat.xim.model;
 
 import android.content.Context;
 
+import com.bester.chat.xim.model.dao.UserAccountDAO;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -15,6 +17,7 @@ public class Model {
     private ExecutorService executors = Executors.newCachedThreadPool();
     //创建Model对象
     private static Model model = new Model();
+    private UserAccountDAO userAccountDAO;
 
     /**
      * 私有化构造函数
@@ -36,7 +39,9 @@ public class Model {
      * @param context
      */
     public void init(Context context){
-        context = mComtext;
+        mComtext = context;
+        //创建用户账号数据库的操作类
+        userAccountDAO = new UserAccountDAO(mComtext);
     }
 
     /**
@@ -44,7 +49,17 @@ public class Model {
      * @return
      */
     public ExecutorService getGlobalThreadPool(){
-
         return executors;
+    }
+
+    /**
+     * 用户登陆成功后进行数据处理
+     */
+    public void loginSuccess() {
+
+    }
+
+    public UserAccountDAO getUserAccountDAO(){
+         return userAccountDAO;
     }
 }
