@@ -83,7 +83,7 @@ public class SplashActivity extends Activity implements View.OnClickListener {
         mBtnLogin = (Button) findViewById(R.id.btn_login);
         mBtnRegister = (Button) findViewById(R.id.btn_register);
 
-        //用于在登陆成功后finish()此页面
+        //用于在其他页面后finish()此页面
         splashActivity = this;
 
         //绑定点击监听

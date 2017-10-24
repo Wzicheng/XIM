@@ -5,26 +5,28 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	xmlns:android="http://schemas.android.com/apk/res/android">
-	<ScrollView
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:scrollbars="none">
-	<LinearLayout
-		android:orientation="vertical"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content">
- 	<View
+
+		<ScrollView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:scrollbars="none">
+
+			<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+ 			<View
 				android:background="@color/black2"
 				android:layout_width="fill_parent"
-				android:layout_height="1.0dip" />
-	    <RelativeLayout
+				android:layout_height="15dp" />
+	    	<RelativeLayout
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:paddingTop="5dp"
 				android:paddingBottom="5dp"
 				android:id="@+id/view_user"
 				android:layout_marginTop="10dp"
-			android:background="@drawable/setting_item_selector">
+				android:background="@drawable/setting_item_selector">
 				<ImageView
 					android:id="@+id/head"
 					android:layout_marginRight="10dp"
@@ -39,7 +41,7 @@
 					android:layout_toRightOf="@+id/head"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:text="菲儿" />
+					android:text="小姨妈" />
 					<TextView
 					android:id="@+id/tvmsg"
 					android:textSize="14.0dip"
@@ -47,7 +49,7 @@
 					android:layout_marginTop="10dp"
 					android:layout_below="@+id/tvname"
 					android:layout_toRightOf="@+id/head" 
-					android:text="微信号：dada20150625" />
+					android:text="微信号：mzjlfyh" />
 					
 					<ImageView
 					android:layout_marginRight="15dp"
@@ -69,12 +71,8 @@
 			<View
 				android:background="@color/black2"
 				android:layout_width="fill_parent"
-				android:layout_height="1.0dip" />
-	    
-		 
-		 
-		
-		<TextView
+				android:layout_height="5dp" />
+			<TextView
 					android:id="@+id/txt_album"
 					style="@style/TxtTitle"
 					android:textSize="16sp"
@@ -89,11 +87,11 @@
 					android:drawableLeft="@drawable/icon_me_photo"
 					android:drawableRight="@drawable/right"
 					android:text="@string/my_posts" />
-		<View
+			<View
 			android:background="@color/black2"
 			android:layout_width="fill_parent"
 			android:layout_height="1.0dip" />
-		<TextView
+			<TextView
 					android:id="@+id/txt_collect"
 					style="@style/TxtTitle"
 					android:textSize="16sp"
@@ -107,12 +105,12 @@
 					android:drawableLeft="@drawable/icon_me_collect"
 					android:drawableRight="@drawable/right"
 					android:text="@string/collection" />
-		<View
+			<View
 			android:background="@color/black2"
 			android:layout_width="fill_parent"
 			android:layout_height="1.0dip" />
 		
-		<TextView
+			<TextView
 					android:id="@+id/txt_money"
 					style="@style/TxtTitle"
 					android:textSize="16sp"
@@ -126,11 +124,11 @@
 					android:drawableLeft="@drawable/icon_me_money"
 					android:drawableRight="@drawable/right"
 					android:text="@string/wallet" />
-		<View
+			<View
 			android:background="@color/black2"
 			android:layout_width="fill_parent"
 			android:layout_height="1.0dip" />
-		<TextView
+			<TextView
 					android:id="@+id/txt_card"
 					style="@style/TxtTitle"
 					android:textSize="16sp"
@@ -144,13 +142,13 @@
 					android:drawableLeft="@drawable/icon_me_card"
 					android:drawableRight="@drawable/right"
 					android:text="@string/card_bag" />
-		<View
+			<View
 			android:background="@color/black2"
 			android:layout_width="fill_parent"
 			android:layout_height="1.0dip" />
 		
 		
-		<TextView
+			<TextView
 					android:id="@+id/txt_smail"
 					style="@style/TxtTitle"
 					android:textSize="16sp"
@@ -165,12 +163,12 @@
 					android:drawableLeft="@drawable/icon_me_smail"
 					android:drawableRight="@drawable/right"
 					android:text="@string/expression2" />
-		<View
+			<View
 			android:background="@color/black2"
 			android:layout_width="fill_parent"
 			android:layout_height="1.0dip" />
 		 
-		<TextView
+			<TextView
 					android:id="@+id/txt_setting"
 					style="@style/TxtTitle"
 					android:textSize="16sp"
@@ -179,16 +177,31 @@
 					android:layout_width="fill_parent"
 					android:layout_height="50dp"
 					android:paddingLeft="16dp"
-					android:paddingRight="10dp"
+					android:paddingRight="16dp"
 					android:layout_marginTop="20dp"
 					android:drawablePadding="10dp"
 					android:drawableLeft="@drawable/icon_me_setting"
 					android:drawableRight="@drawable/right"
 					android:text="@string/settings" />
-		<View
+			<View
 				android:background="@color/black2"
 				android:layout_width="fill_parent"
-				android:layout_height="1.0dip" />
+				android:layout_height="5dp" />
+
+			<Button
+				android:id="@+id/btn_mine_out"
+				android:layout_marginLeft="10dp"
+				android:layout_margin="10dp"
+				android:text="退出登录"
+				android:textSize="20sp"
+				android:textColor="#ffffff"
+				android:background="@drawable/shape_radius_rectangle_red"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" />
+			<View
+				android:background="@color/black2"
+				android:layout_width="fill_parent"
+				android:layout_height="10dp" />
 	</LinearLayout>
 	</ScrollView>
 </LinearLayout>

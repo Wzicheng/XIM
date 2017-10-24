@@ -24,6 +24,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private EditText mEtUsername;
     private EditText mEtPassword;
     private Button mBtnLogin;
+    private Boolean isFromMine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
      */
     private void initData() {
         String userName = getIntent().getStringExtra("userName");
+        isFromMine = getIntent().getBooleanExtra("isFromMine",false);
         mEtUsername.setText(userName);
     }
 
@@ -56,6 +58,11 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_login_back:
+                //判断是否来自欢迎页面
+                if (isFromMine){
+                    Intent intent = new Intent(LoginActivity.this,SplashActivity.class);
+                    startActivity(intent);
+                }
                 finish();
                 break;
             case R.id.btn_login:
