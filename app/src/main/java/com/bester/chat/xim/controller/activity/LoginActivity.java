@@ -9,14 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.baidu.platform.comapi.map.E;
 import com.bester.chat.xim.R;
 import com.bester.chat.xim.model.Model;
 import com.bester.chat.xim.model.bean.UserInfo;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 
-import static com.hyphenate.easeui.model.EaseDefaultEmojiconDatas.getData;
 
 /**
  * Created by Wzich on 2017/10/16.

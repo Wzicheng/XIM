@@ -1,59 +1,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/id_viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+    <!--顶部标题栏-->
+    <include layout="@layout/activity_main_bar" />
 
-    <LinearLayout
+    <!--中部内容 FrameLayout-->
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@drawable/tab_background"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingBottom="3dp"
-        android:paddingTop="1dp">
-
-        <com.bester.chat.xim.controller.view.ShadeView
-            android:id="@+id/id_indicator_one"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="5dp"
-            app:icon="@drawable/weixin"
-            app:text="微信" />
-
-        <com.bester.chat.xim.controller.view.ShadeView
-            android:id="@+id/id_indicator_two"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="5dp"
-            app:icon="@drawable/address_book"
-            app:text="通讯录" />
-
-        <com.bester.chat.xim.controller.view.ShadeView
-            android:id="@+id/id_indicator_three"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="5dp"
-            app:icon="@drawable/discover"
-            app:text="发现" />
-
-        <com.bester.chat.xim.controller.view.ShadeView
-            android:id="@+id/id_indicator_four"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="5dp"
-            app:icon="@drawable/me"
-            app:text="我" />
-
-    </LinearLayout>
-
+        android:padding="3dp"
+        android:background="#FDFAFA">
+        <RadioButton
+            android:id="@+id/btn_bottom_bar_chat"
+            android:text="会话"
+            android:drawableTop="@drawable/btn_chat_selector"
+            style="@style/radioStyle"/>
+        <RadioButton
+            android:id="@+id/btn_bottom_bar_contact"
+            android:text="联系人"
+            android:drawableTop="@drawable/btn_contact_selector"
+            style="@style/radioStyle" />
+        <RadioButton
+            android:id="@+id/btn_bottom_bar_find"
+            android:text="发现"
+            android:drawableTop="@drawable/btn_find_selector"
+            style="@style/radioStyle" />
+        <RadioButton
+            android:id="@+id/btn_bottom_bar_mine"
+            android:text="我"
+            android:drawableTop="@drawable/btn_mine_selector"
+            style="@style/radioStyle" />
+    </RadioGroup>
 </LinearLayout>
